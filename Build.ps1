@@ -146,7 +146,7 @@ function Build-Image {
         docker compose build *> $null
     }
     else {
-        docker compose build --no-cache *> $null
+        docker compose build --pull --no-cache *> $null
     }
     if ($?) {
         Write-InformationWithLog "Build: Success"
